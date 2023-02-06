@@ -8,6 +8,6 @@ This is a simple bug tracking system built for learning purposes using .NET, gRP
 - Search and filter bug reports by various criteria
 
 ## Technology Stack
-Frontend: Blazor Server
-Backend: .NET Core, gRPC, Entity Framework
-Database: Microsoft SQL Server
+- Frontend: Blazor Server
+- Backend: .NET Core, gRPC, Entity Framework
+- Database: Microsoft SQL Server
