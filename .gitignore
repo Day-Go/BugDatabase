@@ -1,1 +1,7 @@
 .vs/
+API/bin/
+API/obj/
+DataAccess/bin/
+DataAccess/obj/
+WebApp/bin/
+WebApp/obj/

@@ -1,0 +1,78 @@
+syntax = "proto3";
+
+option csharp_namespace = "API.Protos";
+
+import "google/protobuf/timestamp.proto";
+
+package bug_management;
+
+service BugManager {
+	rpc SubmitBug (SubmitBugRequest) returns (SubmitBugResponse) {}
+	rpc SubmitComment (SubmitCommentRequest) returns (SubmitCommentResponse) {}
+	rpc GetBugs (GetBugsRequest) returns (GetBugsResponse) {}
+	rpc GetBug (GetBugRequest) returns (GetBugResponse) {}
+	rpc GetComments (GetCommentsRequest) returns (GetCommentsResponse) {}
+	rpc GetReplies (GetRepliesRequest) returns (GetRepliesResponse) {}
+}
+
+message SubmitBugRequest {
+	bool approved = 1;
+	string project = 2;
+	string department = 3;
+	string title = 4;
+	string assigned_to = 5;
+	int32 status = 6;
+	int32 priority = 7;
+	string fix_for = 8;
+	string version = 9;
+	string computer = 10;
+}
+
+message SubmitBugResponse {
+	string response = 1;
+}
+
+message SubmitCommentRequest {
+	int32 id = 1;
+	string message = 2;
+	string sender = 3;
+	google.protobuf.Timestamp created_date = 5;
+	int32 reply_to_id = 6;
+	int32 bug_id = 7;
+}
+
+message SubmitCommentResponse {
+	string response = 1;
+}
+
+message GetBugsRequest {
+
+}
+
+message GetBugsResponse {
+	repeated SubmitBugRequest bug = 1;
+}
+
+message GetBugRequest {
+	int32 id = 1;
+}
+
+message GetBugResponse {
+	SubmitBugRequest bug = 1;
+}
+
+message GetCommentsRequest {
+
+}
+
+message GetCommentsResponse {
+
+}
+
+message GetRepliesRequest {
+
+}
+
+message GetRepliesResponse {
+
+}

@@ -18,7 +18,7 @@ public class BugContext : DbContext
     }
 
     public DbSet<Bug> Bug { get; set; }
-    public DbSet<Log> Log { get; set; }
+    public DbSet<Comment> Comment { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

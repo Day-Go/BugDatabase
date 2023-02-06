@@ -25,29 +25,31 @@ public class Bug
     [Key]
     public int Id { get; set; }
 
-    [MaxLength(50)]
-    public string Project { get; set; }
-
-    [MaxLength(50)]
-    public string Department { get; set; }
+    public bool Approved { get; set; }
 
     [MaxLength(100)]
+    public string Project { get; set; }
+
+    [MaxLength(100)]
+    public string Department { get; set; }
+
+    [MaxLength(200)]
     public string Title { get; set; }
 
-    [MaxLength(25)]
+    [MaxLength(100)]
     public string AssignedTo { get; set; }
 
     public Status Status { get; set; }
 
     public Priority Priority { get; set; }
 
-    [MaxLength(25)]
+    [MaxLength(100)]
     public string FixFor { get; set; }
 
     public string Version { get; set; }
 
-    [MaxLength(50)]
+    [MaxLength(100)]
     public string Computer { get; set; }
 
-    public ICollection<Log> Logs { get; set; }
+    public ICollection<Comment> Comments { get; set; }
 }

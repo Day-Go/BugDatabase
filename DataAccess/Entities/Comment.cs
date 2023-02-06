@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace DataAccess.Entities;
 
 
-public class Log
+public class Comment
 {
     public int Id { get; set; }
 
@@ -15,7 +15,7 @@ public class Log
     public DateTime CreatedDate { get; set;}
 
     public int? ReplyToId { get; set; }
-    public Log? ReplyTo { get; set; }
+    public Comment? ReplyTo { get; set; }
 
     public int BugId { get; set; } 
     public Bug Bug { get; set; }
